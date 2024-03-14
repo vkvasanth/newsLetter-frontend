@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/p1.css">
+    <script>
+        function check(){
+            const e=document.getElementById('email').value
+            const r=document.getElementById('g2')
+            const f=document.getElementById('bx2')
+            const g=document.getElementById('bx1')
+            
+            const emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/
+            let b=email.length
+            
+            if(!emailRegex.test(e)){
+                r.style.display='block'
+
+            }
+            else{
+                f.style.display='block'
+                g.style.display='none'
+                f.style.marginTop='300px'
+                document.getElementById('o2').innerHTML=`${e} please open it.`
+              
+            }
+       
+         
+           
+           console.log(r)
+
+        }
+        function rel(){
+            location.reload()
+        }
+    </script>
+</head>
+<body>
+    <div class="box"  id="bx1">
+        <h2 >Stay updated!</h2>
+        <div class="con">
+            <p class="p1">Join 60,000+ product managers receiving monthly</p><br/>
+            <div class="pp1"><p class="p2">updates on:</p></div>
+            <div class="l1">
+                <img src="./Images/image1.png"class="i1">
+                <div class="po1">
+                    <p class="pl1">Product Discovery and building what matters</p>
+                </div>
+             
+                
+          
+            </div>
+            <div class="l2">
+                <img src="./IMAGES/image2.png" class="i1">
+                <div class="po1">
+                    <p class="pl1">Measuring to ensure updates are a success</p>
+                </div>
+                      
+               
+            </div>
+            <div class="l3">
+                <img src="./IMAGES/image3.png" class="i1">
+                <div class="po1">
+                    <p class="pl1">And much more!</p>
+                </div>
+                      
+               
+            </div>
+            <div class="em">
+                <p style="font-size: 18px;font-weight: 700;">Email address</p>
+                <p style="font-size: 18px;font-weight: 700;padding-left: 150px;color: orangered;display: none;" id="g2">Valid email required</p>
+                
+         
+            </div>
+
+                <input type="email"  id="email" class="y1" >
+            
+            <div class="but">
+                <input type="button" value="Subscribe to monthly newsletter" class="b1" onclick="check()" >
+
+            </div>
+        </div>
+        <div class="im2">
+            <img src="./ProjectImage/s.svg" class="j2">
+        </div>
+    </div>
+    <div class="box2" id="bx2">
+        <div class="z2">
+            <img src="./ProjectImage/rt.png" style="height: 80px;padding-top: 70px;padding-left: 70px;">
+            <p style="font-size: 70px;color: rgb(27, 1, 51);font-weight: 700;padding-left: 80px;">Thanks for</p><br/>
+            <div class="d2">  <p style="font-size: 70px;color: rgb(27, 1, 51);font-weight: 700;padding-left: 80px;">subscribing!</p></div>
+            <div class="d3">    
+                <p style="font-size: 30px;color: rgb(27, 1, 51);font-weight: 300;padding-left: 80px;">A Confirmation has been sent to</p><br/>
+                <div class="d4">
+                <p style="font-size: 30px;color: rgb(27, 1, 51);font-weight: 300;padding-left: 80px;" id="o2"></p></div>
+            </div>
+        
+        </div>
+        <div class="but2">
+            <input type="button" class="b12" value="Dismiss message" onclick="rel()">
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
